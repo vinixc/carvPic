@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AuthGuard } from "./core/auth/auth.guard";
 import { NotFoundComponent } from "./errors/not-found/not-found.component";
 import { SigninComponent } from "./home/signin/signin.component";
+import { SingUpComponent } from "./home/singup/singup.component";
 
 import { PhotoFormComponent } from "./photos/photo-form/photo-form.component";
 import { PhotoListComponent } from "./photos/photo-list/photo-list.component";
@@ -25,9 +26,14 @@ const routes : Routes = [
         canActivate: [AuthGuard]
     },
     {
+        path:'singup',
+        component: SingUpComponent
+    },
+    {
         path: '**', 
         component : NotFoundComponent
     }
+   
 ];
 
 @NgModule({
