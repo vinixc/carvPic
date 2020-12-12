@@ -9,7 +9,8 @@ import { SingupService } from "./singup.service";
 import { UserNotTakenValidatorService } from "./user-not-taken.validator.service";
 
 @Component({
-    templateUrl: './singup.component.html'
+    templateUrl: './singup.component.html',
+    providers: [UserNotTakenValidatorService]
 })
 export class SingUpComponent implements OnInit{
 
